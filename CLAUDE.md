@@ -41,6 +41,13 @@ Browser-compatible files in `photos/`:
 - `IMG_1150.PNG` — Google Maps screenshot (not used on page)
 - HEIC files — not usable in browsers without conversion
 
+## SEO TODOs
+
+- **Open Graph tags** — add `og:title`, `og:description`, `og:image`, `og:url` in `<head>` for social sharing previews
+- **Canonical URL** — add `<link rel="canonical" href="...">` once the GitHub Pages URL is live
+- **Structured data (JSON-LD)** — add a `LodgingBusiness` schema block with address, geo coordinates, and amenities for Google rich results
+- **Body copy** — naturally work in "Post Oak Lake" and "Lampasas" in the visible page text to reinforce those search terms
+
 ## Design Tokens
 
 | Token | Value | Usage |
