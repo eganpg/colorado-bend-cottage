@@ -593,12 +593,28 @@
     document.getElementById('emailForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const email = document.getElementById('emailInput').value;
+      const btn = this.querySelector('button');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
 
-      // TODO: wire up to email service (Mailchimp, ConvertKit, etc.)
-      console.log('Email captured:', email);
-
-      this.style.display = 'none';
-      document.getElementById('emailSuccess').style.display = 'block';
+      fetch('https://formsubmit.co/ajax/pete@fortunehollow.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          _subject: 'New Colorado Bend Cottage inquiry: ' + email,
+          _captcha: 'false'
+        })
+      })
+      .then(function () {
+        document.getElementById('emailForm').style.display = 'none';
+        document.getElementById('emailSuccess').style.display = 'block';
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Notify Me';
+        alert('Something went wrong — please try again.');
+      });
     });
   </script>
 
