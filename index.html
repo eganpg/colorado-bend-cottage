@@ -328,7 +328,7 @@
 
     /* ── GALLERY ── */
     .gallery {
-      padding: 5rem 2rem;
+      padding: 5rem 2rem 3rem;
       background: var(--sand);
     }
 
@@ -363,6 +363,54 @@
       object-fit: cover;
       border-radius: 6px;
       display: block;
+    }
+
+    /* ── COTTAGE INTERIOR ── */
+    .cottage {
+      padding: 3rem 2rem 5rem;
+      background: var(--sand);
+    }
+
+    .cottage-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .cottage h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      color: var(--green-dark);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .cottage-subhead {
+      text-align: center;
+      color: var(--text-mid);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .cottage-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 200px 200px;
+      gap: 0.75rem;
+    }
+
+    .cottage-layout img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+
+    @media (max-width: 700px) {
+      .cottage-layout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 180px);
+      }
     }
 
     /* ── EMAIL CAPTURE ── */
@@ -596,6 +644,23 @@
         <img class="g2" src="photos/optimized/dji_fly_20250111_155302_0081_1736632993249_photo.JPG" loading="lazy" alt="Looking upriver through the limestone canyon" />
         <img class="g3" src="photos/optimized/dji_fly_20250111_155120_0075_1736633016389_photo.JPG" loading="lazy" alt="Aerial view showing the road alongside the Colorado River" />
         <img class="g4" src="photos/optimized/dji_fly_20250111_155256_0080_1736632993632_photo.jpg" loading="lazy" alt="Wide view of the Colorado River winding through Texas Hill Country" />
+      </div>
+    </div>
+  </section>
+
+  <!-- COTTAGE INTERIOR -->
+  <section class="cottage">
+    <div class="cottage-inner">
+      <p class="section-label" style="text-align:center;">Inside the Cottage</p>
+      <h2>Your home base on the river</h2>
+      <p class="cottage-subhead">650 sq ft + 200 sq ft loft &middot; Sleeps 8 &middot; Dog friendly</p>
+      <div class="cottage-layout">
+        <img src="photos/optimized/IMG_5929.jpg" alt="Porch swing overlooking the Colorado River from the cottage deck" />
+        <img src="photos/optimized/IMG_5935.jpg" loading="lazy" alt="Open-plan living area showing loft staircase and kitchen beyond" />
+        <img src="photos/optimized/IMG_5925.jpg" loading="lazy" alt="Cottage exterior with limestone canyon cliff rising behind" />
+        <img src="photos/optimized/IMG_5934.jpg" loading="lazy" alt="Living room with cathedral ceiling and exposed wood beams" />
+        <img src="photos/optimized/IMG_5931.jpg" loading="lazy" alt="Loft bedroom with vaulted beamed ceiling and queen bed" />
+        <img src="photos/optimized/IMG_5937.jpg" loading="lazy" alt="Full kitchen with bar seating and granite countertops" />
       </div>
     </div>
   </section>
